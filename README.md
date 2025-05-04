@@ -11,9 +11,9 @@ It uses Gemini 2.0 Flash and the GitHub API to do all the heavy lifting for you.
 
 ---
 
-## 🖼️ Screenshot
+## 🖼️ Demo
 
-> _Insert a screenshot of your styled UI here_
+![Demo](assets/github_analyzer.gif)
 
 ---
 
