@@ -23,7 +23,6 @@ It uses Gemini 2.0 Flash and the GitHub API to do all the heavy lifting for you.
 - Automatically fetches the README file
 - Uses Gemini 2.0 Flash to analyze and format results
 - Shows past analyses with timestamps
-- Cozy UI: soft background, Inter font, blurred cards, subtle shadows
 - Stores responses in a local SQLite database
 
 ---
