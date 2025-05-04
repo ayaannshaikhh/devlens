@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1ebe1;
+      background-image: radial-gradient(#ccc 1px, transparent 0);
+      background-size: 20px 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fff9f1;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .entry {
+      background: #fff9f1;
+      border: 1px solid #e0d8cc;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      overflow-wrap: break-word;
+    }
+
+    .repo-header {
+      font-weight: 700;
+      font-size: 16px;
+      color: #44624a;
+      margin-bottom: 6px;
+    }
+
+    .timestamp {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .response {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .response ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .response li {
+      margin-bottom: 6px;
+    }
+
+    .response strong {
+      font-weight: 700;
+    }
+
+    .response em {
+      font-style: italic;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #44624a;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📜 Analysis History</h1>
+
+    {% if rows %}
+      {% for repo, response, time in rows %}
+        <div class="entry">
+          <div class="repo-header">{{ repo }}</div>
+          <div class="timestamp">{{ time }}</div>
+          <div class="response">
+            {{ response | safe }}
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No analyses found.</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}" class="back-link">🔙 Back to Analyzer</a>
+  </div>
+
+</body>
+</html>
