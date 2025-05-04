@@ -1,4 +1,4 @@
-# 🔍 DevLens — GitHub Project Analyzer for Internships
+# 🔍 DevLens
 
 DevLens is a clean, minimal web app that lets you paste a GitHub repo and instantly get:
 - 📦 Analyzed tech stack (languages, frameworks, libraries)
